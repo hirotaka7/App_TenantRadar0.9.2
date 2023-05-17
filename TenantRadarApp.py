@@ -317,7 +317,7 @@ if zip_Capsule is not None:
             df_MsbGeo.to_excel(writer_xlsx,index=False,sheet_name="Musubu")
             df_Stacking.to_excel(writer_xlsx,index=False,sheet_name="Stacking")
             df_Sansan.to_excel(writer_xlsx,index=False,sheet_name="Sansan")
-            writer_xlsx.save()
+            writer_xlsx.close()
             out_xlsx=byte_xlsx.getvalue()
             return out_xlsx
         out_xlsx=df_to_xlsx(df_Sum,df_MsbGeo,df_Stacking,df_Sansan)
